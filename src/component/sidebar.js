@@ -53,7 +53,7 @@ function Sidebar(){
             <NavLink to="/Location">
          <p className="te"> Add Location</p>
          </NavLink>
-         <NavLink to="/Menu">
+         <NavLink to="/menunew">
          <p className="te">Menu</p>
          </NavLink>
             </div>

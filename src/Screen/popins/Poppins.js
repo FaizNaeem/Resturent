@@ -12,7 +12,7 @@ function Poppins(){
 <button className="hg">Login</button>
 </NavLink>
 <p className="jklm">Don't have an account? <NavLink to="/singup">
-    <a className="am" href="#">Singn Up</a>
+    <a className="am" href="#">Sign Up</a>
     </NavLink>
 </p>
             </div>

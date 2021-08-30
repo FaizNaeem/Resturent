@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import '../singup2/Singup2.css'
 import icon from '../../component/assets/usericon.png'
-import lock from '../../component/assets/passward.png'
+// import lock from '../../component/assets/passward.png'
 import msg from '../../component/assets/email.png'
 import Phones from '../../component/assets/phone.png'
 import { NavLink } from 'react-router-dom'
@@ -15,7 +15,6 @@ function Singup2({ SingupAction, user, loading }) {
 
     let history = useHistory()
     const [name, setName] = useState('')
-    const [lastname, setlastName] = useState('')
     const [username, setuserName] = useState('')
     const [email, setemail] = useState('')
     const [pass, setpass] = useState('')
@@ -23,8 +22,9 @@ function Singup2({ SingupAction, user, loading }) {
 
 
     const Singup = async () => {
-        SingupAction(email, pass, name, phone, username, lastname)
+        SingupAction(email, pass, name, phone, username, )
         .then((res) => {
+            console.log(res ,"res")
             history.push('/home')
         })
         .catch((err) => {
@@ -60,16 +60,15 @@ function Singup2({ SingupAction, user, loading }) {
 
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><img className="usericon" src={icon} /></span>
-                            <input className="form-control type" placeholder="L Name" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setlastName(e.target.value)} />
+                            <input type="text" className="form-control type" placeholder="UserName" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setuserName(e.target.value)} />
                         </div>
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><img className="usericon" src={msg} /></span>
-                            <input type="text" class="form-control type" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setuserName(e.target.value)} />
-                        </div>
-                        <div className="input-group flex-nowrap ">
-                            <span class="input-group-text" id="addon-wrapping"><img className="usericon" src={lock} /></span>
                             <input type="Password" class="form-control type" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setpass(e.target.value)} />
                         </div>
+                        <div className="bu">
+                    <button className="normal" onClick={Singup}>Sing Up</button>
+                </div>
                     </div>
 
 
@@ -81,9 +80,8 @@ function Singup2({ SingupAction, user, loading }) {
                         </p>
 
                     </div>
-                </div><div className="bu">
-                    <button className="normal" onClick={Singup}>Sing Up</button>
                 </div>
+                
             </div>
 
 

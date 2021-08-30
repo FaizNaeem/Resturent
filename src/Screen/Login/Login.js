@@ -14,6 +14,31 @@ function Loogin2({LoginAction, user, loading}) {
   const [emai, setemai] = useState('')
   const [password, setpas] = useState('')
   // const [user, setUser] = useState(null)
+  const[myStyle, setmyStyle]= useState
+  ({
+      color: 'black',
+      backgroundColor: 'white'
+    })
+    const [btntext, setbtntext]=  useState("Enable Dark mode")
+ const Toggle =()=>{
+    if(myStyle.color=='black'){
+setmyStyle({
+  color: 'white',
+  backgroundColor: 'black'
+  
+})
+setbtntext("Enable light mode")
+    }
+    else{
+setmyStyle({
+  color: 'black',
+  backgroundColor: 'white'
+  
+}) 
+  setmyStyle("Enable Dark mode")
+ }
+  }
+  
 
   const login = () => {
     console.log("data",emai , "pass",password)
@@ -38,7 +63,7 @@ function Loogin2({LoginAction, user, loading}) {
 if(!user){
 
     return (
-      <div className="main">
+      <div className="main" style={myStyle}>
         <div className="block">
 
           <h2><b>Login</b></h2>
@@ -54,17 +79,24 @@ if(!user){
 
         <div className="input-group kl" >
           <div class="input-group-text"><img className="icon" src={lockpicture} /></div>
-          <input type="text" className="inp-con form-control" id="autoSizingInputGroup" placeholder="Passwor" onChange={(e) => setpas(e.target.value)}/>
+          <input type="Password" className="inp-con form-control" id="autoSizingInputGroup" placeholder="Passwor" onChange={(e) => setpas(e.target.value)}/>
         </div>
-        <div className="form-check form-switch rememberme">
+        {/* <div class="form-check form-switch rememberme">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+  <label class="form-check-label" for="flexSwitchCheckDefault" onClick={toggle}>{btntext}</label>
+</div> */}
+<button type="button" class="btn btn-primary " onClick={Toggle}>{btntext}</button>
+        {/* <div className="form-check form-switch rememberme">
           <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
           <label className="form-check-label " for="flexSwitchCheckChecked">Remember Me   </label>
-        </div>
-        <NavLink to="/forget">
-          <div className="div-c">
-            <a className="a" >Forgot Password?</a>
-          </div>
-        </NavLink>
+        </div> */}
+        
+          {/* <div className="div-c">
+            <a className="a" >
+            <NavLink to="/forgetpassword">Forgot Password?
+            </NavLink></a>
+          </div> */}
+       
         {/* <NavLink to="/home"> */}
           <div className="jsx">
             <button className="butto" onClick={login} > Login</button>
@@ -72,7 +104,7 @@ if(!user){
         {/* </NavLink> */}
         <div>
           Do not have an account
-  <NavLink to="/singup">
+  <NavLink to="/Singup">
             <a className="href">Sing Up</a>
           </NavLink>
         </div>

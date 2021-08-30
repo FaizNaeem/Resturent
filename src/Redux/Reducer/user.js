@@ -1,6 +1,8 @@
 const intitialState = {
     user: null,
-    loader: false
+    loader: false,
+    menureducer :null,
+    catogryreducer :null,
 }
 
 export const userReducer = (state = intitialState, action) => {
@@ -10,6 +12,23 @@ export const userReducer = (state = intitialState, action) => {
                 ...state,
                 loader: true,
             }
+            
+            case "MENU_PROCESSED":
+                return {
+                    ...state,
+                    loader: true,
+                    menureducer: action.payload
+                    
+                }
+                case "CATOGRY_PROCESSED":
+                    return {
+                        ...state,
+                        loader: true,
+                        catogryreducer: action.payload
+                        
+                    }
+
+            
         case "LOGIN_PROCESSED":
             return {
                 ...state,

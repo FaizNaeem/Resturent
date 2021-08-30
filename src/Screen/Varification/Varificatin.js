@@ -20,7 +20,7 @@ function Varification2 (){
 </div>
 <div class="input-group flex-nowrap">
  
-  <input type="text" className="form-control faiz" maxLength="1"  aria-label="Username" aria-describedby="addon-wrapping"/>
+  <input type="text" className="form-control fai" maxLength="1"  aria-label="Username" aria-describedby="addon-wrapping"/>
 </div>
 <div class="input-group flex-nowrap">
  
@@ -32,7 +32,7 @@ function Varification2 (){
 </div>
 </div>
 <div>
-  <NavLink to="/Index">    
+  <NavLink to="/newpassword">    
     <button  className="Submit">
     Submit
     </button>

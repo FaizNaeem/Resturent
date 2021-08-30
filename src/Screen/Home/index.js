@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import './index.css'
 import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
@@ -9,6 +9,31 @@ import Sidebar from '../../component/sidebar'
 
 import { useMediaQuery } from 'react-responsive'
 import { NavLink } from 'react-router-dom'
+// const[myStyle, setmyStyle]= useState
+//   ({
+//       color: 'black',
+//       backgroundColor: 'white'
+//     })
+//     const [btntext, setbtntext]=  useState("Enable Dark mode")
+//  const Toggle =()=>{
+//     if(myStyle.color=='black'){
+// setmyStyle({
+//   color: 'white',
+//   backgroundColor: 'black'
+  
+// })
+// setbtntext("Enable light mode")
+//     }
+//     else{
+// setmyStyle({
+//   color: 'black',
+//   backgroundColor: 'white'
+  
+// }) 
+//   setmyStyle("Enable Dark mode")
+//  }
+//   }
+  
  
 // const Example = () => {
 //   const isDesktopOrLaptop = useMediaQuery({

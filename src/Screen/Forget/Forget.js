@@ -15,7 +15,7 @@ return(
   <input type="text" className="form-control alrt " placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"/>
 </div>
 <div className="no" >
-    <NavLink to="/varification">
+    <NavLink to="/verification">
     <button className="submit">
         Submit
     </button>

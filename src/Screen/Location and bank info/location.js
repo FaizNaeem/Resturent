@@ -26,19 +26,19 @@ function Location (){
 
 <div className="col-lg-6 m ">
 <h2 className="r"> <b> Location info </b> </h2>
+<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Resturent Name" />
 <input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Email" />
-<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Email" />
-<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Email" />
+<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Type" />
 
-<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Email" />
+<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Store Address" />
 <select className=" mn ">
     <option>Chain</option>
 <option>Yes</option>
 <option>No</option>
 </select>
 
-<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Email" />
-<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Email" />
+<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Username" />
+<input type="text" className="mn form-control"  id="autoSizingInputGroup" placeholder="Password" />
 <select className=" mn ">
     <option>Select menu </option>
     
@@ -54,9 +54,9 @@ function Location (){
 <div className="col-lg-4 bn">
 <h2 className="b"> <b>Bank info </b> </h2>
 <div className="bak">
-<input type="text" className="nb form-control"  id="autoSizingInputGroup" placeholder="Email" />
-<input type="text" className="nb form-control"  id="autoSizingInputGroup" placeholder="Email" />
-<input type="text" className="nb form-control"  id="autoSizingInputGroup" placeholder="Email" />
+<input type="text" className="nb form-control"  id="autoSizingInputGroup" placeholder="Banks" />
+<input type="text" className="nb form-control"  id="autoSizingInputGroup" placeholder="Routing Number" />
+<input type="text" className="nb form-control"  id="autoSizingInputGroup" placeholder="Account Number" />
 {/* <!-- Button trigger modal --> */}
 <button type="button" className="btn btn-primary hj" data-bs-toggle="modal" data-bs-target="#exampleModal">
 Proceed
